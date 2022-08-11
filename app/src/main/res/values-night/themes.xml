@@ -1,0 +1,19 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="Theme.NewsApp" parent="Theme.Material3.Dark">
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorPrimaryDark">@color/primary_dark</item>
+        <item name="colorAccent">@color/accent</item>
+        <item name="android:statusBarColor" >@color/statusBarColor</item>
+        <item name="backgroundTint">@color/primary_light</item>
+        <item name="android:windowLightStatusBar">true</item>
+    </style>
+
+    <style name="TabGroup.Custom" parent="TagGroup">
+        <item name="atg_borderColor">@color/primary</item>
+        <item name="atg_textColor">@android:color/white</item>
+        <item name="atg_backgroundColor">@android:color/transparent</item>
+        <item name="atg_dashBorderColor">@color/primary</item>
+        <item name="atg_pressedBackgroundColor">@color/primary_dark</item>
+    </style>
+</resources>

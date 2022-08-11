@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".feature_article.ArticleActivity">
+
+    <include
+        android:id="@+id/globalAppBar"
+        layout="@layout/appbarlayout_global" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_margin="16dp"
+            android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/articleImage"
+            android:adjustViewBounds="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:srcCompat="@mipmap/ic_launcher"
+            android:contentDescription="@string/article_image" />
+
+            <TextView
+                android:id="@+id/articleTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:justificationMode="inter_word"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/articleImage"
+                tools:text="Article Title" />
+
+            <ImageView
+                android:id="@+id/calendarIcon"
+                android:layout_width="@dimen/article_info_icons"
+                android:layout_height="@dimen/article_info_icons"
+                android:layout_marginTop="16dp"
+                android:src="@drawable/calendar"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/articlePublishingDate"
+                app:layout_constraintTop_toBottomOf="@+id/articleTitle"
+                android:contentDescription="@string/date" />
+
+            <TextView
+                android:id="@+id/articlePublishingDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginStart="3dp"
+                android:textSize="12sp"
+                app:layout_constraintStart_toEndOf="@+id/calendarIcon"
+                app:layout_constraintTop_toBottomOf="@+id/articleTitle"
+                tools:text="01/01/2022" />
+
+            <ImageView
+                android:id="@+id/authorIcon"
+                android:layout_width="@dimen/article_info_icons"
+                android:layout_height="@dimen/article_info_icons"
+                android:layout_marginTop="16dp"
+                android:layout_marginStart="10dp"
+                android:src="@drawable/user"
+                app:layout_constraintStart_toEndOf="@+id/articlePublishingDate"
+                app:layout_constraintTop_toBottomOf="@+id/articleTitle"
+                android:contentDescription="@string/author" />
+
+            <TextView
+                android:id="@+id/articleAuthor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="3dp"
+                android:layout_marginTop="16dp"
+                android:textSize="12sp"
+                app:layout_constraintStart_toEndOf="@+id/authorIcon"
+                app:layout_constraintTop_toBottomOf="@+id/articleTitle"
+                tools:text="John Doe" />
+
+            <TextView
+                android:id="@+id/articleContent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:justificationMode="inter_word"
+                android:textSize="15sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/articlePublishingDate"
+                tools:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus laoreet augue non sodales finibus. Duis porta pellentesque massa, eget interdum nisi mollis nec. Maecenas nisl nibh, tincidunt aliquet lacus vitae, euismod fermentum sem. Nullam feugiat vehicula mollis. Pellentesque vulputate diam sit amet blandit volutpat. Proin eu orci eu eros consequat blandit. Maecenas orci eros, varius nec pharetra eget, lacinia sit amet elit. Curabitur nec libero vitae orci ultrices convallis eu ac orci. Proin pharetra, odio at euismod vulputate, ipsum nisl lobortis nisi, ut placerat dolor felis et velit. Fusce volutpat ac quam eu venenatis. Vestibulum a lectus at odio mattis mattis." />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/articleContent">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageButton
+                        android:id="@+id/shareFacebook"
+                        android:layout_width="@dimen/social_icons"
+                        android:layout_height="@dimen/social_icons"
+                        android:scaleType="fitCenter"
+                        android:adjustViewBounds="true"
+                        android:background="@android:color/transparent"
+                        android:padding="@dimen/social_icons_padding"
+                        android:src="@drawable/facebook"
+                        android:contentDescription="@string/share_on_facebook" />
+                    <ImageButton
+                        android:id="@+id/shareTwitter"
+                        android:layout_width="@dimen/social_icons"
+                        android:layout_height="@dimen/social_icons"
+                        android:scaleType="fitCenter"
+                        android:background="@android:color/transparent"
+                        android:adjustViewBounds="true"
+                        android:padding="@dimen/social_icons_padding"
+                        android:src="@drawable/twitter"
+                        android:contentDescription="@string/share_on_twitter" />
+                    <ImageButton
+                        android:id="@+id/shareWhatsApp"
+                        android:layout_width="@dimen/social_icons"
+                        android:layout_height="@dimen/social_icons"
+                        android:scaleType="fitCenter"
+                        android:background="@android:color/transparent"
+                        android:adjustViewBounds="true"
+                        android:padding="@dimen/social_icons_padding"
+                        android:src="@drawable/whatsapp"
+                        android:contentDescription="@string/share_on_whatsapp" />
+
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/readMoreButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:text="@string/read_more"
+                    android:textAllCaps="true"
+                    android:visibility="gone"
+                    tools:visibility="visible" />
+            </RelativeLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

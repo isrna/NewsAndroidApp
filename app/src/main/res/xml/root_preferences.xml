@@ -1,0 +1,12 @@
+<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto">
+    <PreferenceCategory
+        app:title="@string/saved_searches_notifications">
+
+        <SwitchPreferenceCompat
+            app:defaultValue="@string/enable_notifications_default_setting"
+            app:icon="@drawable/bell"
+            app:key="@string/enable_notifications_setting_key"
+            app:summary="@string/saved_searches_notification_description"
+            app:title="@string/enable_notifications" />
+    </PreferenceCategory>
+</PreferenceScreen>
