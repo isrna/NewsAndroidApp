@@ -26,7 +26,7 @@ App has support for Light and Dark theme, and some support for the new Android 1
 
 Icons are from FlatIcon.com and FontAwesome.
 
-Test case was started but abandoned due to time constraints.
+[![Android CI](https://github.com/isrna/NewsAndroidApp/actions/workflows/android.yml/badge.svg)](https://github.com/isrna/NewsAndroidApp/actions/workflows/android.yml)
 
 Images:
 ![Light Theme](https://raw.githubusercontent.com/isrna/NewsAndroidApp/main/screenshots/app_light.png)
